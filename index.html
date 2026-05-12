@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- FIX: Prevent scroll restoration causing page jumps on load -->
+<script>
+  if (history.scrollRestoration) history.scrollRestoration = 'manual';
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nicomp Group &mdash; Elevate Your Brand. Transform Your Presence.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <div class="mob-nav-top">
+    <a href="index.html" class="mob-nav-logo">NICOMP <span>GROUP</span></a>
+    <button class="mob-nav-close" id="mobNavClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <nav class="mob-nav-links">
+    <a href="#services" class="mob-nav-link" data-close-nav>
+      <div class="mnl-icon" style="background:linear-gradient(135deg,#1a7fa0,#5bc8e2)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <span class="mnl-text">Services</span>
+      <svg class="mnl-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="#about" class="mob-nav-link" data-close-nav>
+      <div class="mnl-icon" style="background:linear-gradient(135deg,#1da58c,#5bc8e2)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      </div>
+      <span class="mnl-text">About</span>
+      <svg class="mnl-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="#why" class="mob-nav-link" data-close-nav>
+      <div class="mnl-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <span class="mnl-text">Why Us</span>
+      <svg class="mnl-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+
+    <a href="contact.html" class="mob-nav-link mob-nav-link-cta">
+      <div class="mnl-icon" style="background:linear-gradient(135deg,#be185d,#ec4899)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.19 19.79 19.79 0 01.36.5a2 2 0 012-.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.45-.73a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <span class="mnl-text">Get in Touch</span>
+      <svg class="mnl-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </a>
+  </nav>
+
+  <div class="mob-nav-footer">
+    <span>+27 72 931 1668</span>
+    <span class="mob-nav-footer-dot"></span>
+    <span>info@nicompgroup.com</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="logo">NICOMP <span>GROUP</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <ul id="navMenu">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<!-- FIX: hero uses CSS-only background; no fixed/parallax images that cause scroll shift -->
+<section class="hero" id="home">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('work_space1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('work_space2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('work_space3.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('work_space4.jpg')"></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-overlay-gradient" aria-hidden="true"></div>
+
+  <!-- FIX: strip moved inside hero but won't affect layout flow -->
+  <div class="hero-image-strip" aria-hidden="true">
+    <div class="strip-track">
+      <div class="strip-item si-active"><img src="poster.jpg" alt="" loading="lazy"></div>
+      <div class="strip-item"><img src="work_space2.jpg" alt="" loading="lazy"></div>
+      <div class="strip-item"><img src="ecommerce_store.jpg" alt="" loading="lazy"></div>
+      <div class="strip-item"><img src="consulting.jpg" alt="" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Creative Digital Agency &middot; Randburg, SA</span>
+      <span class="eyebrow-line"></span>
+    </div>
+    <h1 class="hero-heading">
+      <span class="word-wrap"><span class="word w1">Elevate</span></span>
+      <span class="word-wrap"><span class="word w2">Your</span></span>
+      <span class="word-wrap"><span class="word w3">Brand.</span></span><br>
+      <span class="word-wrap"><span class="word w4 italic-gold">Transform</span></span>
+      <span class="word-wrap"><span class="word w5">Your</span></span>
+      <span class="word-wrap"><span class="word w6">Presence.</span></span>
+    </h1>
+    <p class="hero-sub">We design stunning websites, powerful brands, and digital solutions<br class="hero-br"> that help South African businesses stand out and grow confidently online.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-hero-primary">Explore Our Services</a>
+      <a href="contact.html" class="btn-hero-outline">Let&rsquo;s Talk</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" role="tablist" aria-label="Hero slides">
+    <button class="hdot active" onclick="goSlide(0)" aria-label="Slide 1" role="tab"></button>
+    <button class="hdot" onclick="goSlide(1)" aria-label="Slide 2" role="tab"></button>
+    <button class="hdot" onclick="goSlide(2)" aria-label="Slide 3" role="tab"></button>
+    <button class="hdot" onclick="goSlide(3)" aria-label="Slide 4" role="tab"></button>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat reveal delay-1"><strong>100%</strong><span>Client Focused</span></div>
+  <div class="stat reveal delay-2"><strong>4+</strong><span>Core Services</span></div>
+  <div class="stat reveal delay-3"><strong>On-Time</strong><span>Delivery</span></div>
+  <div class="stat reveal delay-4"><strong>Affordable</strong><span>Solutions</span></div>
+</div>
+
+<!-- WORK STRIP -->
+<div class="work-strip">
+  <p class="work-strip-label reveal">Our Work</p>
+  <div class="work-grid">
+    <div class="work-card reveal delay-1">
+      <img src="poster.jpg" alt="Graphic design sample" loading="lazy">
+      <div class="work-card-label"><span class="work-card-tag">Graphic Design</span><br>Brand Identity</div>
+    </div>
+    <div class="work-card reveal delay-2">
+      <img src="work_space3.jpg" alt="Web design sample" loading="lazy">
+      <div class="work-card-label"><span class="work-card-tag">Web Design</span><br>Business Website</div>
+    </div>
+    <div class="work-card reveal delay-3">
+      <img src="ecommerce_store.jpg" alt="Development sample" loading="lazy">
+      <div class="work-card-label"><span class="work-card-tag">Development</span><br>E-Commerce Store</div>
+    </div>
+    <div class="work-card reveal delay-4">
+      <img src="consulting.jpg" alt="Business solutions sample" loading="lazy">
+      <div class="work-card-label"><span class="work-card-tag">Business Solutions</span><br>Pitch Deck</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="svc-orb svc-orb1" aria-hidden="true"></div>
+  <div class="svc-orb svc-orb2" aria-hidden="true"></div>
+  <div class="svc-orb svc-orb3" aria-hidden="true"></div>
+
+  <div class="svc-header-wrap reveal">
+    <p class="section-tag">What We Do</p>
+    <h2 class="section-title">Comprehensive<br><span class="svc-title-accent">Digital Solutions</span></h2>
+    <p class="section-sub">From brand identity to full website development &mdash; everything your business needs to dominate online.</p>
+  </div>
+
+  <!-- FIX: role=tablist for accessibility + keyboard nav -->
+  <div class="svc-tabs reveal" role="tablist" aria-label="Service categories">
+    <button class="svc-tab active" data-tab="0" role="tab" aria-selected="true" aria-controls="panel-0">
+      <span class="svc-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
+      Graphic Design
+    </button>
+    <button class="svc-tab" data-tab="1" role="tab" aria-selected="false" aria-controls="panel-1">
+      <span class="svc-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+      Web Design
+    </button>
+    <button class="svc-tab" data-tab="2" role="tab" aria-selected="false" aria-controls="panel-2">
+      <span class="svc-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+      Web Development
+    </button>
+    <button class="svc-tab" data-tab="3" role="tab" aria-selected="false" aria-controls="panel-3">
+      <span class="svc-tab-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span>
+      Business Solutions
+    </button>
+    <div class="svc-tab-ink" aria-hidden="true"></div>
+  </div>
+
+  <!-- FIX: panels use min-height instead of fixed height to prevent layout collapse -->
+  <div class="svc-panels">
+
+    <div class="svc-panel active" id="panel-0" data-panel="0" role="tabpanel" aria-labelledby="">
+      <div class="svc-panel-inner">
+        <div class="svc-panel-left">
+          <div class="svc-hero-badge gd-badge" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.12)"/><path d="M16 32l4-12 4 8 3-5 5 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="rgba(255,255,255,0.6)"/></svg></div>
+          <h3 class="svc-panel-title">Graphic Design</h3>
+          <p class="svc-panel-desc">We craft powerful visual identities that make your brand instantly recognisable, memorable, and trusted in any market.</p>
+          <div class="svc-panel-stat-row">
+            <div class="svc-stat"><span class="svc-stat-n">100+</span><span class="svc-stat-l">Brands Created</span></div>
+            <div class="svc-stat"><span class="svc-stat-n">48h</span><span class="svc-stat-l">First Draft</span></div>
+          </div>
+          <a href="contact.html" class="svc-panel-cta">Get a Quote &rarr;</a>
+        </div>
+        <div class="svc-panel-right">
+          <div class="svc-items-grid">
+            <div class="svc-item-card" style="--delay:0s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1a7fa0,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div><h4>Logo &amp; Brand Identity</h4><p>Custom logos with full brand guidelines &mdash; colours, typography, usage rules.</p></div>
+            <div class="svc-item-card" style="--delay:0.06s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1da58c,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h4>Business Cards &amp; Stationery</h4><p>Print-ready designs for cards, letterheads, and envelopes.</p></div>
+            <div class="svc-item-card" style="--delay:0.12s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#c9a84c,#f0cf82)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div><h4>Posters &amp; Flyers</h4><p>Eye-catching promotional materials for events and campaigns.</p></div>
+            <div class="svc-item-card" style="--delay:0.18s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="11" height="11" rx="2"/><rect x="11" y="11" width="11" height="11" rx="2"/></svg></div><h4>Social Media Design</h4><p>Consistent, branded templates for Instagram, Facebook, LinkedIn.</p></div>
+            <div class="svc-item-card" style="--delay:0.24s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#0d5f7a,#1a7fa0)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><h4>Marketing Materials</h4><p>Brochures, catalogues, presentations, and everything in between.</p></div>
+            <div class="svc-item-card" style="--delay:0.3s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#be185d,#ec4899)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><h4>Packaging Design</h4><p>Product packaging that stands out on shelves and communicates quality.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-1" data-panel="1" role="tabpanel" aria-labelledby="">
+      <div class="svc-panel-inner">
+        <div class="svc-panel-left">
+          <div class="svc-hero-badge wd-badge" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.12)"/><rect x="10" y="14" width="28" height="20" rx="3" stroke="white" stroke-width="2.5"/><line x1="10" y1="20" x2="38" y2="20" stroke="white" stroke-width="2"/><circle cx="14" cy="17" r="1.5" fill="white" opacity="0.6"/><circle cx="19" cy="17" r="1.5" fill="white" opacity="0.6"/></svg></div>
+          <h3 class="svc-panel-title">Web Design</h3>
+          <p class="svc-panel-desc">Modern, mobile-first websites built to impress and convert &mdash; beautifully designed with exceptional UI/UX at every breakpoint.</p>
+          <div class="svc-panel-stat-row">
+            <div class="svc-stat"><span class="svc-stat-n">50+</span><span class="svc-stat-l">Sites Delivered</span></div>
+            <div class="svc-stat"><span class="svc-stat-n">100%</span><span class="svc-stat-l">Mobile Ready</span></div>
+          </div>
+          <a href="contact.html" class="svc-panel-cta">Get a Quote &rarr;</a>
+        </div>
+        <div class="svc-panel-right">
+          <div class="svc-items-grid">
+            <div class="svc-item-card" style="--delay:0s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1a7fa0,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><h4>Custom Website Design</h4><p>Unique, bespoke designs tailored to your brand &mdash; no templates.</p></div>
+            <div class="svc-item-card" style="--delay:0.06s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1da58c,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h4>Responsive &amp; Mobile-First</h4><p>Perfect on phones, tablets, and desktops &mdash; every time.</p></div>
+            <div class="svc-item-card" style="--delay:0.12s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#c9a84c,#f0cf82)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h4>Landing Pages</h4><p>High-converting single-page designs built around one clear goal.</p></div>
+            <div class="svc-item-card" style="--delay:0.18s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>UI/UX Design</h4><p>Research-driven design that reduces friction and boosts engagement.</p></div>
+            <div class="svc-item-card" style="--delay:0.24s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#0d5f7a,#1a7fa0)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div><h4>Website Redesign</h4><p>Modernise your site while preserving brand identity and SEO value.</p></div>
+            <div class="svc-item-card" style="--delay:0.3s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#be185d,#ec4899)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><h4>Digital Marketing Design</h4><p>Banners, email templates, and digital assets for your campaigns.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-2" data-panel="2" role="tabpanel" aria-labelledby="">
+      <div class="svc-panel-inner">
+        <div class="svc-panel-left">
+          <div class="svc-hero-badge dev-badge" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.12)"/><polyline points="14,18 8,24 14,30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><polyline points="34,18 40,24 34,30" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="14" x2="20" y2="34" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <h3 class="svc-panel-title">Web Development</h3>
+          <p class="svc-panel-desc">Robust, scalable digital solutions engineered with modern technologies &mdash; built to perform, secured to last, and easy to manage.</p>
+          <div class="svc-panel-stat-row">
+            <div class="svc-stat"><span class="svc-stat-n">&lt;2s</span><span class="svc-stat-l">Load Time</span></div>
+            <div class="svc-stat"><span class="svc-stat-n">99%</span><span class="svc-stat-l">Uptime Target</span></div>
+          </div>
+          <a href="contact.html" class="svc-panel-cta">Get a Quote &rarr;</a>
+        </div>
+        <div class="svc-panel-right">
+          <div class="svc-items-grid">
+            <div class="svc-item-card" style="--delay:0s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1a7fa0,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h4>Front-End Development</h4><p>Clean HTML, CSS, JavaScript bringing designs to life with precision.</p></div>
+            <div class="svc-item-card" style="--delay:0.06s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1da58c,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="7" rx="9" ry="4"/><path d="M3 7v5c0 2.21 4.03 4 9 4s9-1.79 9-4V7M3 12v5c0 2.21 4.03 4 9 4s9-1.79 9-4v-5"/></svg></div><h4>Back-End Development</h4><p>Server-side logic, databases, and APIs tailored to your needs.</p></div>
+            <div class="svc-item-card" style="--delay:0.12s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#c9a84c,#f0cf82)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div><h4>E-Commerce Websites</h4><p>Full online stores with payment gateways, inventory, and order tracking.</p></div>
+            <div class="svc-item-card" style="--delay:0.18s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h4>WordPress Development</h4><p>Custom themes and plugins &mdash; sites you can manage yourself.</p></div>
+            <div class="svc-item-card" style="--delay:0.24s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#0d5f7a,#1a7fa0)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Website Maintenance</h4><p>Ongoing updates, security patches, backups, and content changes.</p></div>
+            <div class="svc-item-card" style="--delay:0.3s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#be185d,#ec4899)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h4>Performance Optimisation</h4><p>Speed audits, image compression, and code optimisation.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-3" data-panel="3" role="tabpanel" aria-labelledby="">
+      <div class="svc-panel-inner">
+        <div class="svc-panel-left">
+          <div class="svc-hero-badge biz-badge" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.12)"/><rect x="12" y="18" width="24" height="18" rx="2" stroke="white" stroke-width="2.5"/><path d="M18 18v-4a6 6 0 0112 0v4" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+          <h3 class="svc-panel-title">Business Solutions</h3>
+          <p class="svc-panel-desc">Strategic business support to help you launch, grow, and dominate your market &mdash; from business plans to pitch decks and brand strategy.</p>
+          <div class="svc-panel-stat-row">
+            <div class="svc-stat"><span class="svc-stat-n">30+</span><span class="svc-stat-l">Plans Written</span></div>
+            <div class="svc-stat"><span class="svc-stat-n">95%</span><span class="svc-stat-l">Approval Rate</span></div>
+          </div>
+          <a href="contact.html" class="svc-panel-cta">Get a Quote &rarr;</a>
+        </div>
+        <div class="svc-panel-right">
+          <div class="svc-items-grid">
+            <div class="svc-item-card" style="--delay:0s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1a7fa0,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h4>Business Plan Development</h4><p>Professionally written plans for funding, partnerships, or strategy.</p></div>
+            <div class="svc-item-card" style="--delay:0.06s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#1da58c,#5bc8e2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><h4>Company Profile Creation</h4><p>Polished profiles that impress clients, partners, and investors.</p></div>
+            <div class="svc-item-card" style="--delay:0.12s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#c9a84c,#f0cf82)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>Proposal &amp; Pitch Deck Design</h4><p>Visually compelling pitch decks and proposals that win business.</p></div>
+            <div class="svc-item-card" style="--delay:0.18s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h4>Branding Strategy</h4><p>Positioning, messaging, and brand voice to stand out from competitors.</p></div>
+            <div class="svc-item-card" style="--delay:0.24s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#0d5f7a,#1a7fa0)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><h4>Startup Consulting</h4><p>Guidance on brand building, digital presence, and go-to-market strategy.</p></div>
+            <div class="svc-item-card" style="--delay:0.3s"><div class="svc-item-icon" style="background:linear-gradient(135deg,#be185d,#ec4899)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><h4>Digital Marketing Support</h4><p>Social media strategy, content planning, and marketing direction.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="svc-bottom-cta reveal"><a href="contact.html" class="btn-primary">Start a Project &rarr;</a></div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="process-section" id="process">
+  <div class="process-bg-deco" aria-hidden="true"><div class="deco-circle deco-c1"></div><div class="deco-circle deco-c2"></div></div>
+  <div class="process-header reveal">
+    <p class="section-tag">How We Work</p>
+    <h2 class="section-title">How We Bring Your<br><em class="title-em">Brand to Life</em></h2>
+    <p class="section-sub">A simple, effective process designed to deliver powerful digital results &mdash; on time, every time.</p>
+  </div>
+  <div class="process-timeline">
+    <div class="timeline-line" aria-hidden="true"></div>
+    <div class="process-steps">
+      <div class="pstep reveal delay-1">
+        <div class="pstep-icon-wrap" aria-hidden="true"><div class="pstep-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="white" stroke-width="2"/><path d="M4 24c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><div class="pstep-pulse"></div></div>
+        <div class="pstep-card"><div class="pstep-num">01</div><h3 class="pstep-title">Discover</h3><p class="pstep-desc">We deep-dive into your business, goals, audience, and competitive landscape to build a clear strategic foundation.</p><ul class="pstep-list"><li>Brand &amp; goals audit</li><li>Target audience research</li><li>Competitor analysis</li></ul></div>
+      </div>
+      <div class="pstep reveal delay-2">
+        <div class="pstep-icon-wrap" aria-hidden="true"><div class="pstep-icon pi-teal"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="4" stroke="white" stroke-width="2"/><path d="M9 14h10M14 9v10" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><div class="pstep-pulse pp-teal"></div></div>
+        <div class="pstep-card"><div class="pstep-num pn-teal">02</div><h3 class="pstep-title">Design</h3><p class="pstep-desc">Our designers craft modern, visually striking experiences that align with your brand identity and captivate your audience.</p><ul class="pstep-list"><li>UI/UX wireframes</li><li>Visual mockups</li><li>Brand consistency checks</li></ul></div>
+      </div>
+      <div class="pstep reveal delay-3">
+        <div class="pstep-icon-wrap" aria-hidden="true"><div class="pstep-icon pi-gold"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polyline points="6,18 10,10 14,15 18,8 22,14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="pstep-pulse pp-gold"></div></div>
+        <div class="pstep-card"><div class="pstep-num pn-gold">03</div><h3 class="pstep-title">Develop</h3><p class="pstep-desc">We build fast, responsive, and scalable digital solutions using modern technologies &mdash; coded to the highest standards.</p><ul class="pstep-list"><li>Clean, optimised code</li><li>Mobile-first responsive</li><li>Speed &amp; performance built in</li></ul></div>
+      </div>
+      <div class="pstep reveal delay-4">
+        <div class="pstep-icon-wrap" aria-hidden="true"><div class="pstep-icon pi-sky"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4l2.4 7.2H24l-6.2 4.6 2.4 7.2L14 18.8l-6.2 4.2 2.4-7.2L4 11.2h7.6L14 4z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="pstep-pulse pp-sky"></div></div>
+        <div class="pstep-card"><div class="pstep-num pn-sky">04</div><h3 class="pstep-title">Launch</h3><p class="pstep-desc">We handle the go-live, test everything thoroughly, and provide ongoing support to ensure lasting success after launch.</p><ul class="pstep-list"><li>Pre-launch QA testing</li><li>Live deployment</li><li>Post-launch support</li></ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="process-cta reveal"><p>Ready to start your journey?</p><a href="contact.html" class="btn-primary">Let&rsquo;s Get Started &rarr;</a></div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="values" id="about">
+  <div class="values-inner">
+    <div class="about-img-col reveal-left">
+      <div class="about-img-floater2"><span class="f2-num">8+</span><span class="f2-lbl">Years of Experience</span></div>
+      <div class="about-img-main"><img src="work_space3.jpg" alt="Nicomp Group team at work" loading="lazy"></div>
+      <div class="about-img-floater">
+        <div class="af-svg-wrap" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#c9a84c" stroke="#c9a84c" stroke-width="1" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="about-floater-text">
+          <strong>100%</strong>
+          <span>Client satisfaction rate</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <p class="section-tag">Who We Are</p>
+      <h2 class="section-title">Built on Trust,<br>Driven by Innovation</h2>
+      <p class="section-sub">Nicomp Group is a Randburg-based creative digital agency passionate about turning ideas into impactful brands and websites.</p>
+      <div class="values-list">
+        <div class="value-item reveal delay-1">
+          <div class="val-icon-box vi-teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h4>Integrity</h4><p>Honesty and transparency in every client relationship &mdash; trust is the foundation of everything we do.</p></div>
+        </div>
+        <div class="value-item reveal delay-2">
+          <div class="val-icon-box vi-gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <div><h4>Innovation</h4><p>We embrace creativity and modern technology to deliver fresh, forward-thinking solutions.</p></div>
+        </div>
+        <div class="value-item reveal delay-3">
+          <div class="val-icon-box vi-sky"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Commitment</h4><p>High-quality work, on time, every time &mdash; client satisfaction is never negotiable.</p></div>
+        </div>
+        <div class="value-item reveal delay-4">
+          <div class="val-icon-box vi-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><h4>Collaboration</h4><p>We work closely with you, understanding your goals and building solutions together.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="reveal-left">
+      <p class="section-tag">Why Choose Us</p>
+      <h2 class="section-title">Excellence in Every Pixel</h2>
+      <p class="section-sub">We combine innovation, professionalism, and attention to detail to ensure every project reflects excellence and brand consistency.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal delay-1">
+        <div class="why-icon-wrap" style="--ic1:#1a7fa0;--ic2:#5bc8e2" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h4>Creative &amp; Modern</h4>
+        <p>Fresh, distinctive designs that help your brand stand out in a crowded market.</p>
+      </div>
+      <div class="why-item reveal delay-2">
+        <div class="why-icon-wrap" style="--ic1:#1da58c;--ic2:#5bc8e2" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h4>Professional Quality</h4>
+        <p>Every deliverable meets the highest standards of quality and craftsmanship.</p>
+      </div>
+      <div class="why-item reveal delay-3">
+        <div class="why-icon-wrap" style="--ic1:#c9a84c;--ic2:#f0cf82" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h4>Attention to Detail</h4>
+        <p>We sweat the small stuff so your brand looks perfect everywhere it appears.</p>
+      </div>
+      <div class="why-item reveal delay-4">
+        <div class="why-icon-wrap" style="--ic1:#7c3aed;--ic2:#a78bfa" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h4>Affordable Solutions</h4>
+        <p>Premium results at prices that work for growing South African businesses.</p>
+      </div>
+      <div class="why-item reveal delay-5">
+        <div class="why-icon-wrap" style="--ic1:#0d5f7a;--ic2:#2aa8cc" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h4>On-Time Delivery</h4>
+        <p>We respect your deadlines and communicate clearly throughout every project.</p>
+      </div>
+      <div class="why-item reveal delay-6">
+        <div class="why-icon-wrap" style="--ic1:#be185d;--ic2:#ec4899" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h4>Client-Focused</h4>
+        <p>Long-term relationships built on trust, not just one-off transactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GET IN TOUCH -->
+<section class="contact-strip">
+  <div class="cs-bg-orb cs-orb1" aria-hidden="true"></div>
+  <div class="cs-bg-orb cs-orb2" aria-hidden="true"></div>
+  <div class="cs-inner">
+    <p class="section-tag reveal">Get In Touch</p>
+    <h2 class="section-title reveal">Ready to Elevate Your Brand?</h2>
+    <p class="section-sub reveal">Let&rsquo;s build something remarkable together. Reach out and let&rsquo;s discuss your project.</p>
+    <div class="contact-cards">
+      <div class="contact-card reveal delay-1">
+        <div class="cc-icon-wrap" style="--cic1:#1a7fa0;--cic2:#5bc8e2" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.19 19.79 19.79 0 01.36.5a2 2 0 012-.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.45-.73a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <span class="cc-label">Phone</span>
+        <span class="cc-val">+27 72 931 1668</span>
+      </div>
+      <div class="contact-card reveal delay-2">
+        <div class="cc-icon-wrap" style="--cic1:#1da58c;--cic2:#5bc8e2" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <span class="cc-label">Email</span>
+        <span class="cc-val">info@nicompgroup.com</span>
+      </div>
+      <div class="contact-card reveal delay-3">
+        <div class="cc-icon-wrap" style="--cic1:#c9a84c;--cic2:#f0cf82" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div>
+        <span class="cc-label">Website</span>
+        <span class="cc-val">www.nicompgroup.com</span>
+      </div>
+      <div class="contact-card reveal delay-4">
+        <div class="cc-icon-wrap" style="--cic1:#7c3aed;--cic2:#a78bfa" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <span class="cc-label">Location</span>
+        <span class="cc-val">Randburg, Ferndale, 2194</span>
+      </div>
+    </div>
+    <a href="contact.html" class="btn-primary reveal">Start Your Project &rarr;</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">NICOMP <span>GROUP</span></a>
+      <p>Creative digital agency helping South African businesses build powerful brands and online presence.</p>
+    </div>
+    <div class="footer-links"><h4>Navigate</h4><ul><li><a href="#services">Services</a></li><li><a href="#about">About Us</a></li><li><a href="#why">Why Choose Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-links"><h4>Services</h4><ul><li><a href="#services">Graphic Design</a></li><li><a href="#services">Web Design</a></li><li><a href="#services">Web Development</a></li><li><a href="#services">Business Solutions</a></li></ul></div>
+    <div class="footer-links"><h4>Contact</h4><ul><li><a href="tel:+27729311668">+27 72 931 1668</a></li><li><a href="mailto:info@nicompgroup.com">info@nicompgroup.com</a></li><li>Randburg, Ferndale, 2194</li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Nicomp Group. All rights reserved.</p>
+    <p>Randburg, Ferndale, 2194 &middot; South Africa</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/27729311668?text=Hi%20Nicomp%20Group%2C%20I%27d%20like%20to%20discuss%20a%20project."
+   class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <span class="wa-tooltip" aria-hidden="true">Chat with us!</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
